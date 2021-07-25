@@ -3,10 +3,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" type="image/png" href="../assets/icon.png">
-  <link rel="stylesheet" href="main_style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" type="image/png" href="assets/icon.png">
+  <link rel="stylesheet" href="../dist/main_style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap" rel="stylesheet">
   <title>SaaSEmpire – is a capital of Greate Britan</title>
 </head>
 <body>
@@ -50,6 +50,8 @@
     <!-- Slider main container-->
     <div class="about__history">
       <p class="about__history-text">History of Holding</p>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
     <div class="swiper-container">
       <!-- Additional required wrapper-->
@@ -99,8 +101,6 @@
           <p class="about__text">first project started in 2005, and today we've grown so much that we can call ourselves a proud "holding".</p>
         </div>
       </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
   </div>
   <div class="divider"></div>
@@ -136,21 +136,33 @@
   <div class="companies wrapper">
     <div class="companies__container container grid2"> 
       <h1 class="h1">Companies </h1>
-      <p class="p20">We define the strategy through the criterion — maximum competitiveness through cost minimization. Our first project started in 2005, and today we've grown so much that we can call ourselves a proud "holding".</p>
+      <p class="p20">We are young, active and ambitious. We speak the same language and understand each other without words. We are inclined to work.</p>
     </div>
-    <div class="divider"> </div>
-    <div class="companies__container container grid2"> 
-      <div class="companies_link-block"> 
-        <div class="companies__link-item active"><a href="#">BSG</a></div>
-        <div class="companies__link-item"> <a href="#">LeadSolar</a></div>
-        <div class="companies__link-item"> <a href="#">Insfero</a></div>
-        <div class="companies__link-item">  <a href="#">ePochta</a></div>
-        <div class="companies__link-item"> <a href="#">Testelium</a></div>
-      </div>
-      <div class="companies__text-block"> 
-        <h2 class="h2">Let’s the message surfe</h2>
-        <p class="p20">We believe in promises kept, schedules followed, materials arriving undamaged and   on time, solar systems that don’t fail due to installer errors, solar financing that is   fair and non-predatory, and installers making a fair profit.</p>
-        <p class="p20">We believe science which has clearly shown the solar energy to be a real solution   in mitigating pollution and climate change to leave the Earth a better place for our  children.</p><img src="../assets/bsg__img.png" alt="">
+    <div class="divider"></div>
+    <div class="tabs-wrapper">
+      <div class="tabs__container grid2"> 
+        <div class="menuWrapper">
+          <div class="nav-tabs dragscroll"><a class="nav-tab active" href="#" data-tab="1">BSG</a><a class="nav-tab" href="#" data-tab="2">LeadSolar</a><a class="nav-tab" href="#" data-tab="3">Insfero</a><a class="nav-tab" href="#" data-tab="4">ePochta</a><a class="nav-tab" href="#" data-tab="5">Testelium</a></div>
+        </div>
+        <div class="tab-content">
+          <div class="tab-pane active" data-tab-content="1"> 
+            <h3 class="h2">Let’s the message surfe</h3>
+            <p class="p20">We believe in promises kept, schedules followed, materials arriving undamaged and on time, solar systems that don’t fail due to installer errors, solar financing that is fair and non-predatory, and installers making a fair profit.</p>
+            <p class="p20">We believe science which has clearly shown the solar energy to be a real solution in mitigating pollution and climate change to leave the Earth a better place for our children.</p><img src="assets/bsg__img.png" alt="">
+          </div>
+          <div class="tab-pane" data-tab-content="2"> 
+            <h3 class="h2">Tab content 2</h3>
+          </div>
+          <div class="tab-pane" data-tab-content="3"> 
+            <h3 class="h2">Tab content 3</h3><img src="assets/bsg__img.png" alt="">
+          </div>
+          <div class="tab-pane" data-tab-content="4"> 
+            <h3 class="h2">Tab content 4</h3>
+          </div>
+          <div class="tab-pane" data-tab-content="5"> 
+            <h3 class="h2">Tab content 5</h3><img src="assets/bsg__img.png" alt="">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -326,5 +338,6 @@
   </div>
   <!-- javascript-->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script src="../dragscroll.js"></script>
+  <script src="../script.js"></script>
 </body>

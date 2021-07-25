@@ -1278,6 +1278,10 @@ body {
   font-size: 13px;
 }
 
+.form {
+  height: 100vh;
+}
+
 .lable {
   font-size: 13px;
   line-height: 165%;
@@ -1288,6 +1292,14 @@ body {
   padding-bottom: 20px;
 }
 
+.form__container {
+  height: 100%;
+  position: fixed;
+  z-index: 500;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .form__container .h1 {
   width: 768px;
 }

@@ -702,22 +702,22 @@ h1, p, button {
 
 @font-face {
   font-family: "cambon";
-  src: url(font/Cambon-Bold.woff2) format("woff2");
+  src: url(../font/Cambon-Bold.woff2) format("woff2");
   font-weight: 600;
 }
 @font-face {
   font-family: "cambon";
-  src: url(font/Cambon-Medium.woff2) format("woff2");
+  src: url(../font/Cambon-Medium.woff2) format("woff2");
   font-weight: 500;
 }
 @font-face {
   font-family: "cambon";
-  src: url(font/Cambon-Regular.woff2) format("woff2");
+  src: url(../font/Cambon-Regular.woff2) format("woff2");
   font-weight: 400;
 }
 @font-face {
   font-family: "graphik lcg";
-  src: url(font/GraphikLCG-Regular.woff2) format("woff2");
+  src: url(../font/GraphikLCG-Regular.woff2) format("woff2");
   font-weight: 400;
 }
 * {

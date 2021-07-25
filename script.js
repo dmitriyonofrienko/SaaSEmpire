@@ -1,12 +1,13 @@
 //sslider
-const swiper = new Swiper('.swiper-container', {
+const swiper2 = new Swiper('.swiper-2', {
 
-   //button
-   navigator: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-   },
-
+  //  //button
+  //  navigator: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev'
+  //  },
+   
+  
    allowSlidePrev: true,
    allowSlideNext: true,
 
@@ -37,8 +38,7 @@ const swiper = new Swiper('.swiper-container', {
     }
    }
  });
-
-
+ 
  //smoothe-scroll
 function scrollTo(el) {
   window.scroll(

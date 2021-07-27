@@ -2,11 +2,10 @@
 
 //sslider
 var swiper2 = new Swiper('.swiper-2', {
-  //  //button
-  //  navigator: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev'
-  //  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
   allowSlidePrev: true,
   allowSlideNext: true,
   // Default parameters

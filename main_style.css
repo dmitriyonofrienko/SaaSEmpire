@@ -702,17 +702,17 @@ h1, p, button {
 
 @font-face {
   font-family: "saasempireserif";
-  src: url("font/Cambon-Bold.woff2") format("woff2");
+  src: url("font/Spectral-Bold.ttf");
   font-weight: 600;
 }
 @font-face {
   font-family: "saasempireserif";
-  src: url("font/Cambon-Medium.woff2") format("woff2");
+  src: url("font/Spectral-Medium.ttf");
   font-weight: 500;
 }
 @font-face {
   font-family: "saasempireserif";
-  src: url("font/Cambon-Regular.woff2") format("woff2");
+  src: url("font/Spectral-Regular.ttf");
   font-weight: 400;
 }
 @font-face {
@@ -926,9 +926,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.55);
   width: 100%;
   height: 100%;
+  z-index: 1000;
 }
 
 .hero__video {
@@ -999,7 +1000,7 @@ body {
 
 .title-number {
   position: relative;
-  top: -25px;
+  top: 5px;
   display: flex;
   align-items: flex-end;
 }
@@ -1016,7 +1017,7 @@ body {
   line-height: 1.6;
   width: 100px;
   position: relative;
-  bottom: -20px;
+  bottom: 15px;
   left: 15px;
 }
 
@@ -1096,6 +1097,7 @@ body {
   line-height: 135%;
   color: #F55A5A;
   margin-bottom: 10px;
+  font-weight: 500;
 }
 .mission__numbers .mission__number .p16 {
   margin-bottom: 30px;
@@ -1313,24 +1315,28 @@ body {
   }
 }
 .swiper-slide {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
   background: #fff;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  user-select: text;
+}
+.swiper-slide:active {
+  cursor: url(images/grabbing.cur);
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
 }
 .swiper-slide .p16 {
   font-size: 16px;
   color: #999;
   font-weight: normal;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .lable {
@@ -1351,12 +1357,12 @@ body {
   font-size: 18px;
   margin: 0 auto;
   max-width: 1220px;
-  padding: 30px 0px;
+  padding: 10px 0px;
 }
 @media (max-width: 1000px) {
   .form-block {
-    padding: 20 20px;
-    max-width: 640px;
+    padding: 10 20px;
+    max-width: 100%;
   }
 }
 
@@ -1376,6 +1382,18 @@ body {
 @media (max-width: 1000px) {
   .form__button button {
     margin-right: 0px;
+  }
+}
+
+.input__block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px 60px;
+}
+@media (max-width: 1000px) {
+  .input__block {
+    grid-template-columns: 1fr;
+    grid-gap: 0px 10px;
   }
 }
 
@@ -1466,19 +1484,19 @@ body {
 }
 
 .about__history-text {
+  margin-top: 10px;
+  margin-bottom: 40px;
   position: relative;
   font-size: 24px;
   line-height: 130%;
   font-family: "saasempireserif";
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .border-scroll-block {
   position: relative;
-  top: 76px;
-  height: 600px;
+  top: 0px;
   width: 1px;
-  margin-left: 20px;
   border-right: 1px solid rgba(0, 0, 0, 0.15);
 }
 
@@ -1524,8 +1542,18 @@ body {
 
 .about .swiper-slide {
   cursor: move;
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
   display: flex;
   flex-direction: row;
+}
+.about .swiper-slide:active {
+  cursor: url(images/grabbing.cur);
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
 }
 
 .about__line {
@@ -1585,25 +1613,72 @@ body {
 
 .about .swiper-container {
   width: 100%;
-  margin-bottom: 80px;
 }
 
-.swiper-button-prev {
-  height: 32px;
-  width: 32px;
-  background-color: red;
-  position: relative;
-  left: 90%;
-  top: -10px;
+.team .swiper-button-prev {
+  position: absolute;
+  height: 64px;
+  width: 64px;
+  left: -5%;
+  top: 40%;
+}
+@media (max-width: 1000px) {
+  .team .swiper-button-prev {
+    left: 20px;
+  }
+}
+.team .swiper-button-next {
+  position: absolute;
+  height: 64px;
+  width: 64px;
+  right: -5%;
+  top: 40%;
+}
+@media (max-width: 1000px) {
+  .team .swiper-button-next {
+    right: 20px;
+  }
+}
+.team .swiper-button-prev::after {
+  content: url("assets/enable-arrow-back.svg");
+}
+.team .swiper-button-next::after {
+  content: url("assets/enable-arrow-next.svg");
+}
+.team .swiper-button-prev:hover::after {
+  content: url("assets/hover-arrow-back.svg");
+}
+.team .swiper-button-next:hover::after {
+  content: url("assets/hover-arrow-next.svg");
 }
 
-.swiper-button-next {
-  height: 32px;
-  width: 32px;
-  position: relative;
-  left: 95%;
-  top: -20px;
-  background-color: blue;
+.about .swiper-button-prev {
+  position: absolute;
+  height: 52px;
+  width: 52px;
+  right: 115px !important;
+  top: -85px;
+  left: auto;
+}
+.about .swiper-button-next {
+  position: absolute;
+  height: 52px;
+  width: 52px;
+  right: 32px !important;
+  top: -85px;
+  left: auto;
+}
+.about .swiper-button-prev::after {
+  content: url("assets/enable-arrow-back.svg");
+}
+.about .swiper-button-next::after {
+  content: url("assets/enable-arrow-next.svg");
+}
+.about .swiper-button-prev:hover::after {
+  content: url("assets/hover-arrow-back.svg");
+}
+.about .swiper-button-next:hover::after {
+  content: url("assets/hover-arrow-next.svg");
 }
 
 .career .title-number {
@@ -1736,13 +1811,9 @@ body {
 .menuWrapper {
   overflow: hidden;
   cursor: move;
-  /* fallback: no `url()` support or images disabled */
   cursor: -webkit-grab;
-  /* Chrome 1-21, Safari 4+ */
   cursor: -moz-grab;
-  /* Firefox 1.5-26 */
   cursor: grab;
-  /* W3C standards syntax, should come least */
 }
 .menuWrapper:active {
   cursor: url(images/grabbing.cur);
@@ -1754,15 +1825,18 @@ body {
 [data-aos=fade] {
   opacity: 0;
   transition-property: transform, opacity;
+  transform: translateY(20px);
 }
 [data-aos=fade].aos-animate {
   opacity: 1;
 }
-@media screen and (min-width: 768px) {
-  [data-aos=fade] {
-    transform: translateY(20px);
-  }
-  [data-aos=fade].aos-animate {
-    transform: translateX(0);
-  }
+[data-aos=fade].aos-animate {
+  transform: translateX(0);
+}
+
+.about .slide-disable img {
+  object-fit: cover;
+}
+.about .slide-disable .about__text, .about .slide-disable .about__title {
+  display: none;
 }

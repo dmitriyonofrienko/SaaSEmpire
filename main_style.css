@@ -720,7 +720,6 @@ h1, p, button {
   src: url(../font/GraphikLCG-Regular.woff2) format("woff2");
   font-weight: 400;
 }
-
 * {
   font-family: "graphik lcg";
   -webkit-font-smoothing: antialiased;
@@ -778,8 +777,8 @@ h1, p, button {
 }
 
 .p16 {
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -871,14 +870,15 @@ body {
 }
 
 .header {
+  z-index: 1 !important;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
   width: 100vw;
   min-height: 720px;
   height: auto;
-  background-image: url("assets/hero.png");
   background-position: center center;
   background-size: cover;
 }
@@ -887,6 +887,32 @@ body {
     min-height: 520px;
     height: auto;
   }
+}
+
+.hero__video video {
+  height: 100%;
+  max-height: 900px;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.hero__video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  width: 100%;
+  height: 100%;
+}
+
+.hero__video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0 !important;
 }
 
 .header__container {
@@ -902,13 +928,14 @@ body {
 .header__container .menu ul li {
   margin-left: 70px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   .header__container .menu ul {
     display: none;
   }
 }
 
 .title__container {
+  z-index: 100;
   width: 100%;
   padding-bottom: 60px;
   display: flex;
@@ -950,26 +977,30 @@ body {
 }
 
 .title-number {
+  position: relative;
+  top: -25px;
   display: flex;
   align-items: flex-end;
 }
 @media (max-width: 1000px) {
   .title-number {
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
   }
 }
 
 .big-number__description {
   color: white;
-  font-size: 13px;
-  line-height: 165%;
+  font-size: 14px;
+  line-height: 1.6;
   width: 100px;
   position: relative;
-  bottom: 10px;
+  bottom: -20px;
+  left: 15px;
 }
 
 .alert {
+  z-index: 200 !important;
   background-color: #222;
   color: white;
   display: flex;
@@ -1699,4 +1730,20 @@ body {
   cursor: -webkit-grabbing;
   cursor: -moz-grabbing;
   cursor: grabbing;
+}
+
+[data-aos=fade] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos=fade].aos-animate {
+  opacity: 1;
+}
+@media screen and (min-width: 768px) {
+  [data-aos=fade] {
+    transform: translateY(20px);
+  }
+  [data-aos=fade].aos-animate {
+    transform: translateX(0);
+  }
 }

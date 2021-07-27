@@ -1,12 +1,12 @@
 "use strict";
 
 //sslider
-var swiper = new Swiper('.swiper-container2', {
-  //button
-  navigator: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
+var swiper2 = new Swiper('.swiper-2', {
+  //  //button
+  //  navigator: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev'
+  //  },
   allowSlidePrev: true,
   allowSlideNext: true,
   // Default parameters
@@ -84,3 +84,6 @@ for (var i = 0; i < tabNavs.length; i++) {
     ;
   });
 } //scroll to active item
+
+
+AOS.init({});

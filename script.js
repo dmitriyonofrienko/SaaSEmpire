@@ -102,3 +102,9 @@ for (var i = 0; i < tabNavs.length; i++) {
 }
 
 //scroll to active item
+
+
+AOS.init({
+
+
+});

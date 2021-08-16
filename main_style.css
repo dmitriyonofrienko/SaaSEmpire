@@ -893,7 +893,7 @@ body {
   align-items: flex-end;
   width: 100vw;
   min-height: 720px;
-  height: 95vh;
+  height: 100vh;
   background-position: center center;
   background-size: cover;
 }
@@ -1105,7 +1105,13 @@ body {
 }
 
 .companies {
+  padding: 80px 0;
   background-color: #F4F2EF;
+}
+@media (max-width: 1000px) {
+  .companies {
+    padding: 60px 0;
+  }
 }
 .companies .companies__container {
   padding-top: 100px;

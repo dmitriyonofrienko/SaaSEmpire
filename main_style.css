@@ -751,14 +751,14 @@ h1, p, button {
   width: 100%;
   max-width: 768px;
   font-family: "saasempireserif";
-  font-size: 48px;
+  font-size: 60px;
   line-height: 1.3;
   font-weight: 600;
   max-width: 850px;
 }
 @media (max-width: 1000px) {
   .h1 {
-    font-size: 32px;
+    font-size: 34px;
     max-width: 100%;
   }
 }
@@ -897,6 +897,14 @@ body {
   background-position: center center;
   background-size: cover;
 }
+.header .h1 {
+  font-size: 48px;
+}
+@media (max-width: 1000px) {
+  .header .h1 {
+    font-size: 28px !important;
+  }
+}
 @media (max-width: 1000px) {
   .header {
     min-height: 520px;
@@ -1019,6 +1027,10 @@ body {
   position: relative;
   bottom: 15px;
   left: 15px;
+}
+
+.map__container {
+  padding-top: 120px;
 }
 
 .alert {
@@ -1249,6 +1261,11 @@ body {
 .dubai {
   bottom: 50%;
   left: 60%;
+}
+
+.china {
+  bottom: 54%;
+  left: 70%;
 }
 
 .tooltip:hover .tooltip-content {
@@ -1521,10 +1538,16 @@ body {
   display: block;
 }
 
-.about__text {
+.about__description {
   display: block;
-  margin-top: 15px;
-  font-size: 16px;
+  font-size: 15px;
+  font-family: "saasempiresans";
+}
+
+.about__text {
+  margin-top: 20px;
+  display: block;
+  font-size: 15px;
   font-family: "saasempiresans";
 }
 
@@ -1800,7 +1823,13 @@ body {
 }
 
 .tab-pane {
+  margin-top: 20px;
   display: none;
+}
+.tab-pane .h2 {
+  font-size: 32px;
+  line-height: 130%;
+  font-weight: 600;
 }
 .tab-pane img {
   width: 100%;

@@ -1645,6 +1645,8 @@ body {
 }
 
 .team .swiper-button-prev {
+  box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.5);
+  border-radius: 42px;
   position: absolute;
   height: 64px;
   width: 64px;
@@ -1656,7 +1658,12 @@ body {
     left: 20px;
   }
 }
+.team .swiper-button-disabled {
+  opacity: 0 !important;
+}
 .team .swiper-button-next {
+  box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.5);
+  border-radius: 42px;
   position: absolute;
   height: 64px;
   width: 64px;
@@ -1668,17 +1675,11 @@ body {
     right: 20px;
   }
 }
-.team .swiper-button-prev::after {
-  content: url("assets/fill-enable-arrow-back.svg");
+.team .swiper-button-prev:hover .swiper-arrow {
+  stroke: #F55A5A;
 }
-.team .swiper-button-next::after {
-  content: url("assets/fill-enable-arrow-next.svg");
-}
-.team .swiper-button-prev:hover::after {
-  content: url("assets/fill-hover-arrow-back.svg");
-}
-.team .swiper-button-next:hover::after {
-  content: url("assets/fill-hover-arrow-next.svg");
+.team .swiper-button-next:hover .swiper-arrow {
+  stroke: #F55A5A;
 }
 
 .about .swiper-button-prev {

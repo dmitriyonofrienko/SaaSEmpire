@@ -1669,16 +1669,16 @@ body {
   }
 }
 .team .swiper-button-prev::after {
-  content: url("assets/enable-arrow-back.svg");
+  content: url("assets/fill-enable-arrow-back.svg");
 }
 .team .swiper-button-next::after {
-  content: url("assets/enable-arrow-next.svg");
+  content: url("assets/fill-enable-arrow-next.svg");
 }
 .team .swiper-button-prev:hover::after {
-  content: url("assets/hover-arrow-back.svg");
+  content: url("assets/fill-hover-arrow-back.svg");
 }
 .team .swiper-button-next:hover::after {
-  content: url("assets/hover-arrow-next.svg");
+  content: url("assets/fill-hover-arrow-next.svg");
 }
 
 .about .swiper-button-prev {
